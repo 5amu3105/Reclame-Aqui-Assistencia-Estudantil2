@@ -1,0 +1,134 @@
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SOE - Sistema de Ouvidoria Estudantil do IFRN</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="https://ead.ifrn.edu.br/wp-content/uploads/2019/03/logo.3fd3099d4d22472cb384.png"
+    >
+
+    <link rel="stylesheet" href="stylembfirst.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+    
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <span class="logo-text">SOE<span class="logo-accent">.</span></span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Meu Perfil</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Acadêmico</span>
+                <i class="fa-solid fa-chevron-right nav-caret"></i>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Documentos</span>
+                <i class="fa-solid fa-chevron-right nav-caret"></i>
+            </a>
+
+            <a href="#" class="nav-item  is-active">
+                <i class="fa-solid fa-headset"></i>
+                <span>Central de Suporte</span>
+                <i class="fa-solid fa-chevron-right nav-caret"></i>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-comments"></i>
+                <span>Comunicação</span>
+                <i class="fa-solid fa-chevron-right nav-caret"></i>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+                <i class="fa-solid fa-chevron-right nav-caret"></i>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <img src="Imagens/Logo-IFRN.png" alt="Logo IFRN" class="ifrn-logo">
+            <div class="ifrn-text">
+                <strong>INSTITUTO FEDERAL</strong>
+                <small>Rio Grande do Norte</small>
+            </div>
+        </div>
+
+    </aside>
+
+
+
+    <main class="main-content">
+        <header class="page-header">
+            <h1>SOE - IFRN</h1>
+            <p>Central de Suporte</p>
+        </header>
+
+        <section class="support-card" aria-labelledby="support-title">
+            <h2 id="support-title">Como podemos ajudar?</h2>
+            <p class="support-description">
+                Preencha o formulário abaixo para enviar sua dúvida, sugestão,
+                reclamação ou relatar um problema.
+            </p>
+
+            <form class="support-form">
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto">
+                        <option value="">-----------------</option>
+                        <option value="problema-tecnico">Problema técnico</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="outro">Outro...</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        placeholder="Descreva seu problema, dúvida ou sugestão..."
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                    Enviar solicitação
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 — Central de Suporte SOE</p>
+    </footer>
+
+</body>
+</html>
