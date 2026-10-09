@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Setores de Serviço - SOE: Sistema de Ouvidoria Estudantil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="theme-default">
+    <div class="holder">
+
+        <!-- Barra lateral --> 
+        <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <span class="logo-text">SOE<span class="logo-accent">.</span></span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="#" class="nav-item is-active">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Meu Perfil</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Acadêmico</span>
+                <i class="fa-solid fa-chevron-right nav-caret"></i>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Documentos</span>
+                <i class="fa-solid fa-chevron-right nav-caret"></i>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-headset"></i>
+                <span>Central de Suporte</span>
+                <i class="fa-solid fa-chevron-right nav-caret"></i>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-comments"></i>
+                <span>Comunicação</span>
+                <i class="fa-solid fa-chevron-right nav-caret"></i>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+                <i class="fa-solid fa-chevron-right nav-caret"></i>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <img src="Logo-IFRN.png" alt="Logo IFRN" class="ifrn-logo">
+            <div class="ifrn-text">
+                <strong>INSTITUTO FEDERAL</strong>
+                <small>Rio Grande do Norte</small>
+            </div>
+        </div>
+
+    </aside>
+
+        <!-- Conteúdo principal -->
+        <main id="content">
+
+            <!-- Navegação -->
+
+            <div id="breadcrumbs">
+                <a href="index.html">Início</a> &gt; 
+                <a href="listar_setores_servico.html">Listar Setores de Serviço</a>
+            </div>
+
+            <div class="title">
+                <h2>Listar Setores de serviço</h2>
+            </div>
+
+            <!-- Setores de Serviço -->
+            <div class="options">
+                <div class="options-item">
+                <h2 class="optionsHeader">
+                    <button class="options-pushButton" data-bs-toggle="collapse" data-bs-target="#selecione-o-setor-de-serviço-para-a-qual-deseja-abrir-um-chamado">
+                        Selecione o Setor de Serviço para a qual deseja abrir um chamado:
+                    </button>
+                </h2>
+                <div id="selecione-o-setor-de-serviço-para-a-qual-deseja-abrir-um-chamado" class="options-collapse collapse">
+                    <div class="optionsBody">
+                        <div class="boxes links flex-container">
+                            
+                            <a href="abrir_chamado.html?setor=2" class="box-item">
+                                <span class="fas fa-graduation-cap"></span>
+                                <h4>COADESC</h4></a>
+
+                            <a href="abrir_chamado.html?setor=1" class="box-item">
+                                <span class="fas fa-hands-helping"></span>
+                                <h4>COAES</h4></a>
+                                
+                            <a href="abrir_chamado.html?setor=6" class="box-item">
+                                <span class="fas fa-microscope"></span>
+                                <h4>COLAB</h4></a>    
+
+                            <a href="abrir_chamado.html?setor=5" class="box-item">
+                                <span class="fas fa-chalkboard-teacher"></span>
+                                <h4>ETEP</h4></a>
+                            
+                            <a href="abrir_chamado.html?setor=3" class="box-item">
+                                <span class="fas fa-hand-holding-heart"></span>
+                                <h4>Serviço Social</h4></a>
+                            
+                            <a href="abrir_chamado.html?setor=4" class="box-item">
+                                <span class="fas fa-briefcase-medical" aria-hidden="true"></span>
+                                <h4>Setor de Saúde</h4></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
