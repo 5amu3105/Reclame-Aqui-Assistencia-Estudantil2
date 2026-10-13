@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>SOE - Sistema de Ouvidoria Estudantil</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+
+        <!-- Botão de recolher/expandir.-->
+        <button type="button" class="sidebar-collapse-btn" id="sidebarCollapseBtn" aria-label="Recolher menu" aria-expanded="true">
+            <span class="fas fa-chevron-left"></span>
+            <span class="visually-hidden">Recolher menu</span>
+        </button>
+
+        <div class="sidebar-logo">
+            <h1 class="logo-text">SOE<span class="logo-accent">.</span></h1>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="#" class="nav-item">
+                <span class="fas fa-home"></span>
+                <span class="nav-label">Início</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="fas fa-user"></span>
+                <span class="nav-label">Meu perfil</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="fas fa-clipboard-list"></span>
+                <span class="nav-label">Formulário</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="fas fa-headset"></span>
+                <span class="nav-label">Central de suporte</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="fas fa-cog"></span>
+                <span class="nav-label">Configurações</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <img src="Imagens/Logo-IFRN.png" alt="Logo IFRN" class="ifrn-logo">
+            <div class="ifrn-text">
+                <strong>INSTITUTO FEDERAL</strong>
+                <small>Rio Grande do Norte</small>
+            </div>
+        </div>
+
+    </aside>
+    <div class="sidebar-backdrop" aria-hidden="true"></div>
+
+    <!-- Barra superior -->
+    <header class="topbar">
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+            <span class="fas fa-bars"></span>
+            <span class="visually-hidden">Abrir menu</span>
+        </button>
+
+        <div class="topbar-actions">
+
+            <button class="icon-btn" type="button" aria-label="Notificações">
+                <span class="fas fa-bell"></span>
+                <span class="icon-dot"></span>
+                <span class="visually-hidden">Notificações</span>
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="content">
+
+        <nav class="breadcrumb" aria-label="Caminho">
+            <span class="fas fa-house"></span>
+            <a href="#">Início</a>
+            <span class="fas fa-chevron-right"></span>
+            <span>Categoria atual</span>
+        </nav>
+
+        <h2 class="page-title">Bem-vindo, Usuário!</h2>
+        <p class="page-subtitle">Acompanhe suas manifestações e acesse rapidamente os serviços da Ouvidoria.</p>
+
+        <div class="dashboard-grid">
+
+            <!-- Coluna central -->
+            <div class="col-main">
+
+
+                <section class="card sectors">
+                    <h3 class="card-title"><span class="fas fa-building"></span> Setores</h3>
+
+                    <!--
+                        Cada setor é um <button> com um "data-sector" (o nome pode
+                        ser qualquer palavra, sem espaço e sem repetir). Ele precisa
+                        ter um <div class="sector-panel" data-sector-panel="..."> em
+                        algum lugar abaixo com o MESMO valor - é assim que o clique
+                        sabe qual painel abrir. O JavaScript não precisa ser tocado
+                        para adicionar setores novos, só duplicar os dois blocos.
+                    -->
+                    <div class="sectors-scroll">
+
+                        <button type="button" class="sector-chip stat-info" data-sector="Coaes" aria-expanded="false">
+                            <span class="fas fa-handshake-angle"></span>
+                            <strong>COAES</strong>
+                        </button>
+
+                        <button type="button" class="sector-chip stat-info" data-sector="Coadesc" aria-expanded="false">
+                            <span class="fas fa-graduation-cap"></span>
+                            <strong>COADESC</strong>
+                        </button>
+
+                        <button type="button" class="sector-chip stat-info" data-sector="Setor-Saúde" aria-expanded="false">
+                            <span class="fas fa-suitcase-medical"></span>
+                            <strong>Setor de Saúde</strong>
+                        </button>
+
+                        <button type="button" class="sector-chip stat-info" data-sector="Assistência-social" aria-expanded="false">
+                            <span class="fas fa-hand-holding-heart"></span>
+                            <strong>Assistência Social</strong>
+                        </button>
+
+                        <button type="button" class="sector-chip stat-info" data-sector="Napne" aria-expanded="false">
+                            <span class="fas fa-puzzle-piece"></span>
+                            <strong>NAPNE</strong>
+                        </button>
+
+                        <button type="button" class="sector-chip stat-info" data-sector="Etep" aria-expanded="false">
+                            <span class="fas fa-chalkboard-user"></span>
+                            <strong>ETEP</strong>
+                        </button>
+
+                        <button type="button" class="sector-chip stat-info" data-sector="Colab" aria-expanded="false">
+                            <span class="fas fa-microscope"></span>
+                            <strong>COLAB</strong>
+                        </button>
+
+                    </div>
+
+                    <div class="sector-panel" data-sector-panel="Coaes" hidden>
+                        <h4 class="sector-panel-title">COAES</h4>
+                        <div class="sector-panel-grid">
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-list"></span><strong>97</strong><span class="stat-label">Manifestações recebidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-check"></span><strong>87</strong><span class="stat-label">Resolvidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-hourglass-half"></span><strong>10</strong><span class="stat-label">Pendentes</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clock"></span><strong>2 horas</strong><span class="stat-label">Tempo médio de resposta</span></div>
+                        </div>
+                    </div>
+
+                    <div class="sector-panel" data-sector-panel="Coadesc" hidden>
+                        <h4 class="sector-panel-title">COADESC</h4>
+                        <div class="sector-panel-grid">
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-list"></span><strong>112</strong><span class="stat-label">Manifestações recebidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-check"></span><strong>90</strong><span class="stat-label">Resolvidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-hourglass-half"></span><strong>22</strong><span class="stat-label">Pendentes</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clock"></span><strong>2 dias</strong><span class="stat-label">Tempo médio de resposta</span></div>
+                        </div>
+                    </div>
+
+                    <div class="sector-panel" data-sector-panel="Setor-Saúde" hidden>
+                        <h4 class="sector-panel-title">Setor de Saúde</h4>
+                        <div class="sector-panel-grid">
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-list"></span><strong>64</strong><span class="stat-label">Manifestações recebidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-check"></span><strong>50</strong><span class="stat-label">Resolvidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-hourglass-half"></span><strong>14</strong><span class="stat-label">Pendentes</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clock"></span><strong>5 dias</strong><span class="stat-label">Tempo médio de resposta</span></div>
+                        </div>
+                    </div>
+
+                    <div class="sector-panel" data-sector-panel="Assistência-social" hidden>
+                        <h4 class="sector-panel-title">Assistência Social</h4>
+                        <div class="sector-panel-grid">
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-list"></span><strong>20</strong><span class="stat-label">Manifestações recebidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-check"></span><strong>18</strong><span class="stat-label">Resolvidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-hourglass-half"></span><strong>2</strong><span class="stat-label">Pendentes</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clock"></span><strong>1 dia</strong><span class="stat-label">Tempo médio de resposta</span></div>
+                        </div>
+                    </div>
+
+                    <div class="sector-panel" data-sector-panel="Napne" hidden>
+                        <h4 class="sector-panel-title">NAPNE</h4>
+                        <div class="sector-panel-grid">
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-list"></span><strong>10</strong><span class="stat-label">Manifestações recebidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-check"></span><strong>7</strong><span class="stat-label">Resolvidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-hourglass-half"></span><strong>3</strong><span class="stat-label">Pendentes</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clock"></span><strong>6 dias</strong><span class="stat-label">Tempo médio de resposta</span></div>
+                        </div>
+                    </div>
+
+                    <div class="sector-panel" data-sector-panel="Etep" hidden>
+                        <h4 class="sector-panel-title">ETEP</h4>
+                        <div class="sector-panel-grid">
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-list"></span><strong>1</strong><span class="stat-label">Manifestações recebidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-check"></span><strong>1</strong><span class="stat-label">Resolvidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-hourglass-half"></span><strong>0</strong><span class="stat-label">Pendentes</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clock"></span><strong>146 dias</strong><span class="stat-label">Tempo médio de resposta</span></div>
+                        </div>
+                    </div>
+
+                    <div class="sector-panel" data-sector-panel="Colab" hidden>
+                        <h4 class="sector-panel-title">COLAB</h4>
+                        <div class="sector-panel-grid">
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-list"></span><strong>86</strong><span class="stat-label">Manifestações recebidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clipboard-check"></span><strong>66</strong><span class="stat-label">Resolvidas</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-hourglass-half"></span><strong>20</strong><span class="stat-label">Pendentes</span></div>
+                            <div class="stat-card stat-info"><span class="fas fa-clock"></span><strong>1 dia</strong><span class="stat-label">Tempo médio de resposta</span></div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="card stats">
+                    <h3 class="card-title"><span class="fas fa-chart-pie"></span> Estatísticas gerais</h3>
+
+                    <div class="stats-grid">
+                        <div class="stat-card stat-info">
+                            <span class="fas fa-user"></span>
+                            <strong>1.248</strong>
+                            <span class="stat-label">Estudantes</span>
+                        </div>
+                        <div class="stat-card stat-success">
+                            <span class="fas fa-clipboard-check"></span>
+                            <strong>320</strong>
+                            <span class="stat-label">Manifestações resolvidas</span>
+                        </div>
+                        <div class="stat-card stat-caution">
+                            <span class="fas fa-hourglass-half"></span>
+                            <strong>56</strong>
+                            <span class="stat-label">Manifestações pendentes</span>
+                        </div>
+                        <div class="stat-card stat-violet">
+                            <span class="fas fa-bell"></span>
+                            <strong>12</strong>
+                            <span class="stat-label">Avisos recentes</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Coluna lateral direita -->
+            <div class="col-side">
+
+                <section class="card">
+                    <h3 class="card-title"><span class="fas fa-calendar-days"></span> Prazos <a href="#" class="card-link">Visualizar todos</a></h3>
+
+                    <div class="list-item">
+                        <div class="date-tag"><strong>15</strong><small>AGO</small></div>
+                        <div>
+                            <strong>Sua resposta de exemplo chega até 06/10</strong>
+                            <small>Prazo até 06/10 ás 17:00</small>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="date-tag"><strong>18</strong><small>AGO</small></div>
+                        <div>
+                            <strong>Prazo para envio de documentos</strong>
+                            <small>Até 23:59</small>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="date-tag"><strong>22</strong><small>AGO</small></div>
+                        <div>
+                            <strong>Reunião de mediação</strong>
+                            <small>Sala 203 - 08:00</small>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h3 class="card-title"><span class="fas fa-bullhorn"></span> Avisos e comunicações <a href="#" class="card-link">Visualizar todos</a></h3>
+
+                    <div class="list-item">
+                        <span class="status-dot dot-caution"></span>
+                        <div>
+                            <strong>Novidades da última atualização</strong>
+                            <small>Publicado em 10/08/2025</small>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <span class="status-dot dot-info"></span>
+                        <div>
+                            <strong>Manutenção programada no sistema</strong>
+                            <small>Publicado em 05/08/2025</small>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card performance-card">
+                    <span class="performance-icon"><span class="fas fa-chart-line"></span></span>
+                    <div>
+                        <strong>Sua opinião importa!</strong>
+                        <p>Acompanhe o andamento de todas as suas manifestações e ajude a melhorar o IFRN.</p>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+    <div class="under-bar">
+        <footer class="page-under">
+            <div class="foot-container">
+                <div class="aboutfoot">
+                    <h3>Sobre o SOE</h3>
+                    <h4>Sistema de Ouvidoria Estudantil</h4>
+                    <p>Um sistema feito para todos os estudantes.</p>
+                    <ul class="mt-3">
+                        <li>
+                            <a href="https://portal.ifrn.edu.br/">
+                                <span class="fas fa-link"></span>
+                                <span>Portal do IFRN</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="linksunder">
+                    <h3>Links úteis</h3>
+                    <ul class="linksUteis">
+                        <li>
+                            <a href="https://suap.ifrn.edu.br/">
+                                <span class="fas fa-s"></span>
+                                <span>SUAP</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://portal.ifrn.edu.br/">
+                                <span class="fas fa-newspaper"></span>
+                                <span>Portal do IFRN</span>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- preencher a parte de href com o link do Perfil-->
+                            <a href="#">
+                                <span class="fas fa-user"></span>
+                                <span>Meu usuário</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <!-- preencher a parte de href com o link da central de suporte-->
+                                <span class="fas fa-headset"></span>
+                                <span>Central de suporte</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="foot-container-last">
+                    <h3>Informações técnicas</h3>
+                    <dl>
+                        <dt>Última atualização do SOE:</dt>
+                        <dd>28/09/2026</dd>
+                        <dt>Responsável:</dt>
+                        <dd>Integrantes do Projeto</dd>
+                    </dl>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="inicio.js" defer></script>
+
+</body>
+
+</html>
